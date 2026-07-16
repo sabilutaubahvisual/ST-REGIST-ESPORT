@@ -1,0 +1,609 @@
+/* ==========================================================
+   SABILU TAUBAH ESPORT
+   PREMIUM ANIMATION
+========================================================== */
+
+/* ===============================
+   FADE UP
+================================ */
+
+.fade-up{
+
+    opacity:0;
+    transform:translateY(70px);
+    transition:1s ease;
+
+}
+
+.fade-up.show{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
+
+/* ===============================
+   FADE LEFT
+================================ */
+
+.fade-left{
+
+    opacity:0;
+    transform:translateX(-80px);
+    transition:1s ease;
+
+}
+
+.fade-left.show{
+
+    opacity:1;
+    transform:translateX(0);
+
+}
+
+/* ===============================
+   FADE RIGHT
+================================ */
+
+.fade-right{
+
+    opacity:0;
+    transform:translateX(80px);
+    transition:1s ease;
+
+}
+
+.fade-right.show{
+
+    opacity:1;
+    transform:translateX(0);
+
+}
+
+/* ===============================
+   ZOOM
+================================ */
+
+.zoom{
+
+    opacity:0;
+    transform:scale(.8);
+    transition:1s;
+
+}
+
+.zoom.show{
+
+    opacity:1;
+    transform:scale(1);
+
+}
+
+/* ===============================
+   FLOAT
+================================ */
+
+.float{
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+/* ===============================
+   GLOW
+================================ */
+
+.glow{
+
+animation:glow 2s infinite;
+
+}
+
+@keyframes glow{
+
+0%,100%{
+
+filter:
+
+drop-shadow(0 0 10px #00BFFF)
+
+drop-shadow(0 0 25px #00BFFF);
+
+}
+
+50%{
+
+filter:
+
+drop-shadow(0 0 30px #00BFFF)
+
+drop-shadow(0 0 60px #00BFFF);
+
+}
+
+}
+
+/* ===============================
+   PULSE
+================================ */
+
+.pulse{
+
+animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* ===============================
+   BUTTON GLOW
+================================ */
+
+.btn-primary,
+.btn-secondary,
+.btn-daftar{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.btn-primary::after,
+.btn-secondary::after,
+.btn-daftar::after{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:80%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.45),
+
+transparent
+
+);
+
+transform:skewX(-30deg);
+
+}
+
+.btn-primary:hover::after,
+.btn-secondary:hover::after,
+.btn-daftar:hover::after{
+
+animation:shine .8s;
+
+}
+
+@keyframes shine{
+
+100%{
+
+left:160%;
+
+}
+
+}
+
+/* ===============================
+   CARD HOVER
+================================ */
+
+.info-card,
+.category-card,
+.time-card,
+.timeline-content{
+
+transition:.4s;
+
+}
+
+.info-card:hover,
+.category-card:hover,
+.time-card:hover,
+.timeline-content:hover{
+
+transform:
+
+translateY(-10px)
+
+scale(1.02);
+
+}
+
+/* ===============================
+   HERO TITLE
+================================ */
+
+.hero h1{
+
+animation:titleGlow 4s infinite;
+
+}
+
+@keyframes titleGlow{
+
+0%,100%{
+
+text-shadow:
+
+0 0 10px rgba(0,191,255,.2);
+
+}
+
+50%{
+
+text-shadow:
+
+0 0 35px rgba(0,191,255,.6);
+
+}
+
+}
+
+/* ===============================
+   HERO SUBTITLE
+================================ */
+
+.hero h2{
+
+animation:subtitle 3s infinite;
+
+}
+
+@keyframes subtitle{
+
+0%,100%{
+
+opacity:1;
+
+}
+
+50%{
+
+opacity:.75;
+
+}
+
+}
+
+/* ===============================
+   LOGO ROTATE
+================================ */
+
+.hero-logo{
+
+animation:
+
+float 5s ease-in-out infinite,
+
+rotateLogo 15s linear infinite;
+
+}
+
+@keyframes rotateLogo{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* ===============================
+   SCROLL INDICATOR
+================================ */
+
+.mouse{
+
+animation:mouseFloat 2s infinite;
+
+}
+
+@keyframes mouseFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+
+/* ===============================
+   PARTICLE BACKGROUND
+================================ */
+
+.background::before{
+
+animation:bgMove 20s linear infinite;
+
+}
+
+@keyframes bgMove{
+
+0%{
+
+background-position:0 0;
+
+}
+
+100%{
+
+background-position:0 500px;
+
+}
+
+}
+
+/* ===============================
+   SECTION APPEAR
+================================ */
+
+section{
+
+animation:sectionFade 1s;
+
+}
+
+@keyframes sectionFade{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+/* ===============================
+   SPONSOR LOGO
+================================ */
+
+.sponsor-logo{
+
+transition:.35s;
+
+}
+
+.sponsor-logo:hover{
+
+transform:
+
+scale(1.1)
+
+rotate(-3deg);
+
+}
+
+/* ===============================
+   FOOTER SOCIAL
+================================ */
+
+.footer-social a{
+
+transition:.35s;
+
+}
+
+.footer-social a:hover{
+
+transform:
+
+translateY(-8px)
+
+rotate(10deg);
+
+}
+
+/* ===============================
+   SCROLL TO TOP
+================================ */
+
+#toTop{
+
+animation:toTopGlow 2s infinite;
+
+}
+
+@keyframes toTopGlow{
+
+0%,100%{
+
+box-shadow:
+
+0 0 15px #00BFFF;
+
+}
+
+50%{
+
+box-shadow:
+
+0 0 35px #00BFFF;
+
+}
+
+}
+
+/* ===============================
+   LOADER TEXT
+================================ */
+
+#loader h1{
+
+animation:titleIntro 1s ease;
+
+}
+
+@keyframes titleIntro{
+
+from{
+
+opacity:0;
+
+transform:
+
+translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+
+translateY(0);
+
+}
+
+}
+
+/* ===============================
+   LOADER BAR
+================================ */
+
+.loader-bar span{
+
+animation:
+
+loadingBar 3s linear forwards,
+
+barGlow 1.5s infinite;
+
+}
+
+@keyframes barGlow{
+
+0%,100%{
+
+box-shadow:
+
+0 0 10px #00BFFF;
+
+}
+
+50%{
+
+box-shadow:
+
+0 0 25px #00BFFF;
+
+}
+
+}
+/* ======================================
+3D CARD
+====================================== */
+
+.category-card,
+.info-card,
+.time-card{
+
+transform-style:preserve-3d;
+
+}
+
+.category-card:hover{
+
+transform:
+
+translateY(-10px)
+
+rotateX(3deg)
+
+rotateY(-3deg);
+
+}
+
+.info-card:hover{
+
+transform:
+
+translateY(-10px)
+
+rotateY(4deg);
+
+}
+
+.time-card:hover{
+
+transform:
+
+translateY(-10px)
+
+rotateX(5deg);
+
+}
